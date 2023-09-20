@@ -423,31 +423,46 @@ header{
 
 .item-feature .icon i{
 color:red;
-opacity: .3;
 font-size: 40px;
-top: -50;
-left: 90;
-transform:translateY(0px) ;
-display:flex ;
-position: absolute;
+display: block;
 
 }
 
-@keyframes change{
-   0%{
-transform:translateY(0px) ;
-   }
-   50%{
-   transform: translateY(-100px);
-   opacity: 0;
-   }
+.item-feature .icon{
+    width: 200px;
+   height: 64px;
+    border: 1px solid;
+    position: relative;
+    margin: auto;
+  overflow: hidden;
+}
 
-   100%{
-    transform:translateY(0px) ;
-    opacity: 1;
-   }
+.icon1{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    transition: .5s;
+     opacity: 0.3;
+}
+
+.icon2{
+    position: absolute;
+    z-index: 0;
+   top: 200px;
+   left: 40%;
+}
+
+.item-feature .icon:hover .icon1{
+    transform: translateY(-200px);
+    transition: .5s;
    
 }
+.item-feature .icon:hover .icon2{
+    transform: translateY(-200px);
+  transition: .5s;
+}
+   
+
 
 .item-feature h3{
     color: white;
@@ -459,14 +474,6 @@ opacity: .3;
 font-size: 20px ;
 }
 
-.item-feature:hover i{
-    animation-name: change;
-    animation-duration:1s ;
-    animation-fill-mode: forwards;
-    
-    animation-direction: alternate;
-    transform:translateY(0px) ;
-}
 
 
 .lineFeature{
